@@ -3,10 +3,15 @@ import { Container, Table, Button, Modal, Form, Col, Row } from "react-bootstrap
 
 export default function ManageMovie() {
     const handleModalCreate = () => {};
-    const handleModalUpdate = () => {};
+    const openModalUpdate = () => {};
+    const closeModalUpdate = () => {};
 
     return (
-        <Container>
+        <Container className='mt-4'>
+            <Button variant='primary' onClick={handleModalCreate}>
+                Create Movie
+            </Button>
+            <br />
             <Table striped bordered hover>
                 <thead>
                     <tr>
@@ -27,9 +32,6 @@ export default function ManageMovie() {
                     </tr>
                 </tbody>
             </Table>
-            <Button variant='primary' onClick={handleModalCreate}>
-                Create Movie
-            </Button>
 
             <Modal show={false} onHide={handleModalCreate}>
                 <Modal.Header closeButton>
@@ -89,16 +91,14 @@ export default function ManageMovie() {
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant='secondary' onClick={handleClose}>
+                    <Button variant='secondary' onClick={handleModalCreate}>
                         Close
                     </Button>
-                    <Button variant='primary' onClick={handleClose}>
-                        Create
-                    </Button>
+                    <Button variant='primary'>Create</Button>
                 </Modal.Footer>
             </Modal>
 
-            <Modal show={false} onHide={handleModalUpdate}>
+            <Modal show={false} onHide={closeModalUpdate}>
                 <Modal.Header closeButton>
                     <Modal.Title>Update Movie</Modal.Title>
                 </Modal.Header>
@@ -159,12 +159,10 @@ export default function ManageMovie() {
                     <div className='d-flex justify-content-between'>
                         <Button variant='danger'>Delete</Button>
                         <div>
-                            <Button variant='secondary' onClick={handleClose}>
+                            <Button variant='secondary' onClick={closeModalUpdate}>
                                 Close
                             </Button>
-                            <Button variant='primary' onClick={handleClose}>
-                                Update
-                            </Button>
+                            <Button variant='primary'>Update</Button>
                         </div>
                     </div>
                 </Modal.Footer>
