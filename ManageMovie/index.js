@@ -109,7 +109,7 @@ export default function ManageMovie() {
                                 Movie Name
                             </Form.Label>
                             <Col sm='10'>
-                                <Form.Control placeholder='Enter Movie Name' />
+                                <Form.Control placeholder='Avenger' />
                             </Col>
                         </Form.Group>
                         <Form.Group as={Row}>
@@ -117,7 +117,7 @@ export default function ManageMovie() {
                                 Running Time
                             </Form.Label>
                             <Col sm='10'>
-                                <Form.Control type='number' />
+                                <Form.Control type='number' defaultValue='120' />
                             </Col>
                         </Form.Group>
                         <Form.Group as={Row}>
@@ -125,7 +125,7 @@ export default function ManageMovie() {
                                 Image URL
                             </Form.Label>
                             <Col sm='10'>
-                                <Form.Control placeholder='Enter Image URL' />
+                                <Form.Control placeholder='Enter Image URL' defaultValue='https://google.com' />
                             </Col>
                         </Form.Group>
                         <Form.Group as={Row}>
@@ -133,7 +133,7 @@ export default function ManageMovie() {
                                 Description
                             </Form.Label>
                             <Col sm='10'>
-                                <Form.Control placeholder='Description' />
+                                <Form.Control placeholder='Description' defaultValue='New Movie' />
                             </Col>
                         </Form.Group>
                         <Form.Group as={Row}>
