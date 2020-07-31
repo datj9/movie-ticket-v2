@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Table, Button, Modal, Form, Col, Row } from "react-bootstrap";
 
-export default function ManageGenre() {
+export default function ManageTheater() {
     const handleModalCreate = () => {};
     const openModalUpdate = () => {};
     const closeModalUpdate = () => {};
@@ -9,36 +9,52 @@ export default function ManageGenre() {
     return (
         <Container className='mt-4'>
             <Button variant='primary' onClick={handleModalCreate}>
-                Create Genre
+                Create Theater
             </Button>
             <br />
             <Table striped bordered hover>
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Name</th>
+                        <th>Movie</th>
+                        <th>Theater</th>
+                        <th>Starting Time</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Adventure</td>
+                        <td>Blue Eyes</td>
+                        <td>CGV Su Van Hanh</td>
+                        <td></td>
                     </tr>
                 </tbody>
             </Table>
 
             <Modal show={false} onHide={handleModalCreate}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Create Genre</Modal.Title>
+                    <Modal.Title>Create Show</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form>
                         <Form.Group as={Row}>
                             <Form.Label column sm='2'>
-                                Name
+                                Movie
                             </Form.Label>
                             <Col sm='10'>
-                                <Form.Control type='text' placeholder='Enter Theater Name' />
+                                <Form.Control as='select'>
+                                    <select>Select Movie</select>
+                                </Form.Control>
+                            </Col>
+                        </Form.Group>
+                        <Form.Group as={Row}>
+                            <Form.Label column sm='2'>
+                                Theater
+                            </Form.Label>
+                            <Col sm='10'>
+                                <Form.Control as='select'>
+                                    <select>Select Theater</select>
+                                </Form.Control>
                             </Col>
                         </Form.Group>
                     </Form>
@@ -53,16 +69,28 @@ export default function ManageGenre() {
 
             <Modal show={false} onHide={closeModalUpdate}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Update Theater</Modal.Title>
+                    <Modal.Title>Update Show</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form>
                         <Form.Group as={Row}>
                             <Form.Label column sm='2'>
-                                Name
+                                Movie
                             </Form.Label>
                             <Col sm='10'>
-                                <Form.Control type='text' defaultValue='CGV Su Van Hanh' />
+                                <Form.Control as='select'>
+                                    <select>Select Movie</select>
+                                </Form.Control>
+                            </Col>
+                        </Form.Group>
+                        <Form.Group as={Row}>
+                            <Form.Label column sm='2'>
+                                Theater
+                            </Form.Label>
+                            <Col sm='10'>
+                                <Form.Control as='select'>
+                                    <select>Select Theater</select>
+                                </Form.Control>
                             </Col>
                         </Form.Group>
                     </Form>

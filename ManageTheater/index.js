@@ -104,10 +104,15 @@ export default function ManageTheater() {
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant='secondary' onClick={closeModalUpdate}>
-                        Close
-                    </Button>
-                    <Button variant='primary'>Update</Button>
+                    <div className='d-flex justify-content-between'>
+                        <Button variant='danger'>Delete</Button>
+                        <div>
+                            <Button variant='secondary' onClick={closeModalUpdate}>
+                                Close
+                            </Button>
+                            <Button variant='primary'>Update</Button>
+                        </div>
+                    </div>
                 </Modal.Footer>
             </Modal>
         </Container>
